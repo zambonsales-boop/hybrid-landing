@@ -253,13 +253,13 @@ p { margin: 0 0 1em; }
 /* ---------- Tabella di confronto ---------- */
 .cmp { border: 1px solid var(--line); background: #fff; }
 .cmp-head, .cmp-row { display: grid; grid-template-columns: 1fr 1fr; }
-.cmp-head div { padding: 16px 24px; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); background: #eef1f6; }
+.cmp-head div { display: flex; align-items: center; gap: 12px; padding: 16px 24px; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); background: #eef1f6; }
 .cmp-head div:last-child { background: var(--navy); color: var(--gold-soft); }
 .cmp-row { border-top: 1px solid var(--line); }
 .cmp-cell { border-right: 1px solid var(--line); }
 .cmp-cell:last-child { border-right: 0; }
 .cmp-cell--yes { background: #f8faff; }
-.cmp-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; background: none; border: 0; text-align: left; cursor: pointer; font: 600 1rem/1.35 var(--sans); color: var(--ink); }
+.cmp-btn { width: 100%; display: flex; align-items: center; gap: 14px; padding: 20px 24px; background: none; border: 0; text-align: left; cursor: pointer; font: 600 1rem/1.35 var(--sans); color: var(--ink); }
 .cmp-cell--yes .cmp-btn { color: var(--navy); }
 .cmp-btn:hover { background: rgba(10, 31, 68, 0.03); }
 .cmp-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
@@ -274,6 +274,27 @@ p { margin: 0 0 1em; }
 .cmp-cell.is-open .cmp-more { grid-template-rows: 1fr; visibility: visible; transition: grid-template-rows 0.28s ease; }
 .cmp-bonus { margin: 22px 0 0; text-align: center; font-size: 0.95rem; color: var(--navy); }
 .cmp-bonus strong { color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; margin-right: 6px; }
+
+
+/* Segni di confronto: spunta verde / croce rossa */
+.cmp-mark { position: relative; flex: none; width: 26px; height: 26px; border-radius: 50%; }
+.cmp-mark--yes { background: #16a34a; box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.16); }
+.cmp-mark--yes::after { content: ""; position: absolute; left: 50%; top: 46%; width: 6px; height: 11px; border: solid #fff; border-width: 0 2.5px 2.5px 0; transform: translate(-50%, -50%) rotate(45deg); }
+.cmp-mark--no { background: #dc2626; box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.14); }
+.cmp-mark--no::before, .cmp-mark--no::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 2.5px; background: #fff; border-radius: 2px; }
+.cmp-mark--no::before { transform: translate(-50%, -50%) rotate(45deg); }
+.cmp-mark--no::after { transform: translate(-50%, -50%) rotate(-45deg); }
+.cmp-head .cmp-mark { width: 22px; height: 22px; box-shadow: none; }
+.cmp-head .cmp-mark--yes::after { width: 5px; height: 9px; }
+.cmp-head .cmp-mark--no::before, .cmp-head .cmp-mark--no::after { width: 10px; }
+.cmp-btn > span { flex: 1; }
+.cmp-cell--yes { background: #f3fbf6; }
+.cmp-cell--yes .cmp-btn:hover { background: rgba(22, 163, 74, 0.05); }
+.cmp-cell:not(.cmp-cell--yes) { background: #fffafa; }
+.cmp-cell:not(.cmp-cell--yes) .cmp-btn { color: #4b5563; font-weight: 500; }
+.cmp-cell:not(.cmp-cell--yes) .cmp-btn:hover { background: rgba(220, 38, 38, 0.04); }
+.cmp-more p { padding-left: 64px; }
+.sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 /* ---------- Metodo compatto ---------- */
 .pillar { padding: 26px 24px 28px; }
@@ -312,10 +333,10 @@ p { margin: 0 0 1em; }
   .cmp-row { grid-template-columns: 1fr; border-top: 8px solid var(--bg-alt); }
   .cmp-cell { border-right: 0; }
   .cmp-cell::before { content: attr(data-label); display: block; padding: 14px 20px 0; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
-  .cmp-cell--yes::before { color: var(--gold); }
   .cmp-cell--yes { border-top: 1px solid var(--line); }
   .cmp-btn { padding: 8px 20px 16px; }
-  .cmp-more p { padding: 0 20px 18px; }
+  .cmp-more p { padding: 0 20px 18px 60px; }
+  .cmp-cell::before { display: none; }
   .steps { flex-direction: column; align-items: flex-start; gap: 10px; }
 }
 @media (max-width: 560px) {
