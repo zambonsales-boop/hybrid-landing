@@ -329,14 +329,16 @@ p { margin: 0 0 1em; }
   .partners-band .partners { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 800px) {
-  .cmp-head { display: none; }
-  .cmp-row { grid-template-columns: 1fr; border-top: 8px solid var(--bg-alt); }
-  .cmp-cell { border-right: 0; }
-  .cmp-cell::before { content: attr(data-label); display: block; padding: 14px 20px 0; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
-  .cmp-cell--yes { border-top: 1px solid var(--line); }
-  .cmp-btn { padding: 8px 20px 16px; }
-  .cmp-more p { padding: 0 20px 18px 60px; }
-  .cmp-cell::before { display: none; }
+  /* Su tablet e telefono restano SEMPRE due colonne affiancate, in versione compatta */
+  .cmp-head div { padding: 12px 10px; gap: 8px; font-size: 0.62rem; letter-spacing: 0.08em; }
+  .cmp-head .cmp-mark { width: 18px; height: 18px; }
+  .cmp-head .cmp-mark--yes::after { width: 4px; height: 8px; border-width: 0 2px 2px 0; }
+  .cmp-head .cmp-mark--no::before, .cmp-head .cmp-mark--no::after { width: 9px; height: 2px; }
+  .cmp-btn { flex-wrap: wrap; align-content: flex-start; gap: 8px 6px; padding: 14px 10px 14px; font-size: 0.84rem; line-height: 1.3; }
+  .cmp-btn .cmp-mark { order: 1; width: 22px; height: 22px; }
+  .cmp-btn .cmp-plus { order: 2; margin-left: auto; width: 24px; height: 24px; }
+  .cmp-btn > span { order: 3; flex: 0 0 100%; }
+  .cmp-more p { padding: 0 10px 16px; font-size: 0.82rem; line-height: 1.5; }
   .steps { flex-direction: column; align-items: flex-start; gap: 10px; }
 }
 @media (max-width: 560px) {
