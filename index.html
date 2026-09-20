@@ -20,30 +20,20 @@
       <img src="assets/logo-hybrid.avif" alt="" width="42" height="42">
       <div><span>HYBRID</span><small>S.Y.N.C.™ Academy</small></div>
     </a>
-    <button class="nav-toggle" aria-label="Apri il menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="nav" aria-label="Principale">
-      <a href="#academy">Academy</a>
-      <a href="#metodo">Metodo</a>
-      <a href="#risultati">Risultati</a>
-      <a href="#testimonianze">Testimonianze</a>
-      <a href="#faq">FAQ</a>
-      <a class="btn btn--navy" href="#contatti">Parla con un Trainer</a>
-    </nav>
+    <a class="btn btn--navy header-cta" href="#contatti">Parla con un Trainer</a>
   </div>
 </header>
 
 <main id="top">
 
-<!-- ============ HERO ============ -->
+<!-- ============ HERO + VSL ============ -->
 <section class="hero hero--vsl" id="academy">
   <div class="wrap">
     <h1>Diventa un venditore certificato a livello europeo e lavora con aziende milionarie in <em>8 settimane</em>.</h1>
 
-    <!-- ===== VSL =====
-         Per attivare il video incolla l'URL di embed in script.js (costante VSL_URL).
-         Finché è vuoto, qui compare il segnaposto 16:9. -->
-    <div class="vsl" id="vsl">
-      <div class="vsl-frame">
+    <!-- VSL: l'URL del video si imposta in videos.js -->
+    <div class="vsl">
+      <div class="vsl-frame" data-video="vsl">
         <button class="vsl-play" type="button" aria-label="Guarda il video">
           <span class="vsl-icon" aria-hidden="true"></span>
           <span class="vsl-label">Guarda il video</span>
@@ -56,19 +46,12 @@
     <div class="hero-cta">
       <a class="btn btn--gold btn--lg" href="#contatti">Parla con un Trainer</a>
     </div>
-    <p class="hero-note">Guarda il video: scopri come il metodo S.Y.N.C.™ allinea mente, linguaggio e presenza per vendere con sicurezza e prevedibilità, anche partendo da zero.</p>
-
-    <ul class="hero-facts" aria-label="Il percorso in sintesi">
-      <li><strong>8 settimane</strong> di percorso strutturato</li>
-      <li><strong>4 pilastri</strong> del metodo S.Y.N.C.™</li>
-      <li><strong>Certificazione</strong> SYNC Seller</li>
-    </ul>
   </div>
 </section>
 
 <!-- ============ FASCIA ISTITUZIONALE ============ -->
 <!-- TODO: verificare con il bando la dicitura ufficiale da riportare accanto ai loghi
-     (es. programma, asse, CUP/riferimenti di finanziamento). -->
+     (programma, asse, riferimenti di finanziamento) e aggiungere il logo dell'ente certificatore. -->
 <section class="institutional" aria-label="Riconoscimenti istituzionali">
   <div class="wrap">
     <p class="institutional-label">Percorso riconosciuto da</p>
@@ -83,48 +66,127 @@
 </section>
 
 <!-- ============ RISULTATI ============ -->
-<section class="section" id="risultati">
+<section class="section section--tight" id="risultati">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Risultati</span>
-      <h2>Un metodo misurato sui numeri</h2>
-      <p>Il valore del percorso si valuta su trattative reali, mercati diversi e modelli di business eterogenei.</p>
-    </div>
-
     <div class="stats">
       <div class="stat">
         <div class="stat-value">15M+</div>
         <div class="stat-label">Risultato economico</div>
-        <p>Valore generato con il metodo Hybrid in tre anni su trattative reali. Vendite tracciate, non proiezioni o stime.</p>
+        <p>Valore generato in tre anni su trattative reali, tracciate.</p>
       </div>
       <div class="stat">
         <div class="stat-value">99,4%</div>
         <div class="stat-label">Affidabilità del metodo</div>
-        <p>Utilizzatori che confermano miglioramenti misurabili dopo l'implementazione completa del percorso.</p>
+        <p>Utilizzatori che confermano miglioramenti misurabili.</p>
       </div>
       <div class="stat">
         <div class="stat-value">27%</div>
         <div class="stat-label">Incremento del fatturato</div>
-        <p>Più chiusure, margini più alti e meno sconti concessi: il valore viene compreso prima del prezzo.</p>
+        <p>Più chiusure, margini più alti, meno sconti.</p>
       </div>
       <div class="stat">
         <div class="stat-value">1.787+</div>
         <div class="stat-label">Professionisti formati</div>
-        <p>Per metà commerciali attivi su mercati complessi (fiscale, legale, marketing), per metà sales in team strutturati o closer indipendenti.</p>
+        <p>Commerciali attivi e sales in team strutturati.</p>
       </div>
     </div>
-    <!-- TODO: completare la nota con fonte e criteri di calcolo (campione, periodo, definizione di "affidabilità"). -->
+    <!-- TODO: completare con fonte e criteri di calcolo (campione, periodo, definizione di "affidabilità"). -->
     <p class="footnote">Nota metodologica: dati elaborati internamente da HYBRID S.Y.N.C.™ Academy. I risultati individuali dipendono dall'applicazione del metodo e non sono garantiti.</p>
   </div>
 </section>
 
+<!-- ============ CONFRONTO ============ -->
+<section class="section section--alt" id="confronto">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Il confronto</span>
+      <h2>Dall'improvvisazione al controllo del processo</h2>
+    </div>
+
+    <div class="cmp" role="table" aria-label="Confronto tra il mercato e il metodo S.Y.N.C.™">
+      <div class="cmp-head" role="row">
+        <div role="columnheader">Nel mercato</div>
+        <div role="columnheader">Con S.Y.N.C.™</div>
+      </div>
+
+      <div class="cmp-row" role="row">
+        <div class="cmp-cell" role="cell" data-label="Nel mercato">
+          <button class="cmp-btn" type="button" aria-expanded="false"><span>Improvvisazione, nessuna struttura</span><i class="cmp-plus" aria-hidden="true"></i></button>
+          <div class="cmp-more"><div><p>Senza un metodo replicabile ogni vendita dipende dall'improvvisazione: si chiude quando va bene, ma non si sa perché.</p></div></div>
+        </div>
+        <div class="cmp-cell cmp-cell--yes" role="cell" data-label="Con S.Y.N.C.™">
+          <button class="cmp-btn" type="button" aria-expanded="false"><span>Una struttura replicabile</span><i class="cmp-plus" aria-hidden="true"></i></button>
+          <div class="cmp-more"><div><p>La mappa della vendita (Hook, Diagnose, Align, Close) guida ogni conversazione verso la chiusura in modo naturale, con un processo che si ripete e si migliora.</p></div></div>
+        </div>
+      </div>
+
+      <div class="cmp-row" role="row">
+        <div class="cmp-cell" role="cell" data-label="Nel mercato">
+          <button class="cmp-btn" type="button" aria-expanded="false"><span>Marginalità compressa</span><i class="cmp-plus" aria-hidden="true"></i></button>
+          <div class="cmp-more"><div><p>Senza metodo né posizionamento si vende al ribasso e il cliente detta il prezzo. Per molti il tetto resta sotto i 2.000 €/mese di commissioni reali.</p></div></div>
+        </div>
+        <div class="cmp-cell cmp-cell--yes" role="cell" data-label="Con S.Y.N.C.™">
+          <button class="cmp-btn" type="button" aria-expanded="false"><span>Posizionamento premium</span><i class="cmp-plus" aria-hidden="true"></i></button>
+          <div class="cmp-more"><div><p>Il valore viene compreso prima del prezzo: si alzano i prezzi, si scelgono i clienti e si aumentano i guadagni senza aumentare le ore di lavoro.</p></div></div>
+        </div>
+      </div>
+
+      <div class="cmp-row" role="row">
+        <div class="cmp-cell" role="cell" data-label="Nel mercato">
+          <button class="cmp-btn" type="button" aria-expanded="false"><span>Formazione motivazionale, senza strumenti</span><i class="cmp-plus" aria-hidden="true"></i></button>
+          <div class="cmp-more"><div><p>Tanta carica, poca sostanza: si esce ispirati, ma senza strumenti concreti da usare nelle trattative.</p></div></div>
+        </div>
+        <div class="cmp-cell cmp-cell--yes" role="cell" data-label="Con S.Y.N.C.™">
+          <button class="cmp-btn" type="button" aria-expanded="false"><span>Un sistema pratico</span><i class="cmp-plus" aria-hidden="true"></i></button>
+          <div class="cmp-more"><div><p>Psicologia, neuroscienze, comunicazione e procedure applicate alla vendita reale. Non è motivazione da palco: sono azioni, struttura e ripetibilità, applicabili dal primo giorno.</p></div></div>
+        </div>
+      </div>
+
+      <div class="cmp-row" role="row">
+        <div class="cmp-cell" role="cell" data-label="Nel mercato">
+          <button class="cmp-btn" type="button" aria-expanded="false"><span>Visti come venditori</span><i class="cmp-plus" aria-hidden="true"></i></button>
+          <div class="cmp-more"><div><p>I clienti alzano barriere appena si parla, perché percepiscono che si vuole chiudere e non aiutare.</p></div></div>
+        </div>
+        <div class="cmp-cell cmp-cell--yes" role="cell" data-label="Con S.Y.N.C.™">
+          <button class="cmp-btn" type="button" aria-expanded="false"><span>Consulenti, non venditori</span><i class="cmp-plus" aria-hidden="true"></i></button>
+          <div class="cmp-more"><div><p>Ci si posiziona come partner strategico: il cliente non si sente "chiuso", ma trova un professionista con cui affrontare le difficoltà e crescere nel business.</p></div></div>
+        </div>
+      </div>
+
+      <div class="cmp-row" role="row">
+        <div class="cmp-cell" role="cell" data-label="Nel mercato">
+          <button class="cmp-btn" type="button" aria-expanded="false"><span>Nessun controllo emotivo</span><i class="cmp-plus" aria-hidden="true"></i></button>
+          <div class="cmp-more"><div><p>Ansia, fretta, paura del "no": ogni obiezione diventa un muro insormontabile.</p></div></div>
+        </div>
+        <div class="cmp-cell cmp-cell--yes" role="cell" data-label="Con S.Y.N.C.™">
+          <button class="cmp-btn" type="button" aria-expanded="false"><span>Leggere e guidare le emozioni</span><i class="cmp-plus" aria-hidden="true"></i></button>
+          <div class="cmp-more"><div><p>Con la Neuro Influence si imparano microsegnali e stati emotivi del cliente, e ogni obiezione diventa un'occasione per far avanzare la trattativa, con meno ansia da call.</p></div></div>
+        </div>
+      </div>
+
+      <div class="cmp-row" role="row">
+        <div class="cmp-cell" role="cell" data-label="Nel mercato">
+          <button class="cmp-btn" type="button" aria-expanded="false"><span>Nessun sistema, nessun progresso</span><i class="cmp-plus" aria-hidden="true"></i></button>
+          <div class="cmp-more"><div><p>Senza numeri e senza feedback non si sa cosa migliorare: tanti tentativi, ma si resta fermi.</p></div></div>
+        </div>
+        <div class="cmp-cell cmp-cell--yes" role="cell" data-label="Con S.Y.N.C.™">
+          <button class="cmp-btn" type="button" aria-expanded="false"><span>Misurazione e affiancamento</span><i class="cmp-plus" aria-hidden="true"></i></button>
+          <div class="cmp-more"><div><p>Analisi pratiche di call, script e strategie, lezioni di gruppo e sessioni private (in base al pacchetto) e la community HYBRID Club. I risultati diventano misurabili su conversioni e ticket medio.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="cmp-bonus"><strong>Bonus:</strong> Certificazione SYNC Seller</p>
+  </div>
+</section>
+
 <!-- ============ METODO ============ -->
-<section class="section section--alt" id="metodo">
+<section class="section" id="metodo">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Il metodo</span>
       <h2>HYBRID S.Y.N.C.™ Selling System</h2>
-      <p>Un sistema formativo che unisce neuroscienze e coaching per trasformare la vendita in una pratica professionale, replicabile e misurabile.</p>
+      <p>Neuroscienze e coaching per trasformare la vendita in una pratica professionale, replicabile e misurabile.</p>
     </div>
 
     <div class="pillars">
@@ -132,154 +194,106 @@
         <div class="pillar-letter">S</div>
         <div class="pillar-tag">Structure</div>
         <h3>La mappa della vendita</h3>
-        <p>Hook, Diagnose, Align, Close: una struttura semplice ed efficace per guidare ogni conversazione verso la chiusura in modo naturale.</p>
+        <p>Hook, Diagnose, Align, Close: una struttura semplice per guidare ogni conversazione.</p>
       </article>
       <article class="pillar">
         <div class="pillar-letter">Y</div>
         <div class="pillar-tag">Yield</div>
         <h3>Convertire con metodo</h3>
-        <p>Ogni fase del processo commerciale viene ottimizzata, bilanciando performance e autenticità, per risultati che si ripetono nel tempo.</p>
+        <p>Ogni fase del processo ottimizzata, tra performance e autenticità.</p>
       </article>
       <article class="pillar">
         <div class="pillar-letter">N</div>
         <div class="pillar-tag">Neuro Influence</div>
         <h3>Leggere il cliente</h3>
-        <p>Microsegnali, neurocomunicazione e decisione emozionale: si impara a riconoscere i driver del cliente, senza manipolare.</p>
+        <p>Microsegnali e decisione emozionale, senza manipolare.</p>
       </article>
       <article class="pillar">
         <div class="pillar-letter">C</div>
         <div class="pillar-tag">Connection</div>
         <h3>Relazioni, non transazioni</h3>
-        <p>Leadership personale e PNL al servizio di rapporti professionali che durano oltre la firma del contratto.</p>
+        <p>Leadership personale e PNL per rapporti che durano oltre la firma.</p>
       </article>
     </div>
+
+    <ol class="steps" aria-label="Il percorso in 8 settimane">
+      <li><span>01</span> Neuro Influence</li>
+      <li><span>02</span> Comunicazione ad alto impatto</li>
+      <li><span>03</span> Posizionamento premium</li>
+    </ol>
   </div>
 </section>
 
-<!-- ============ PERCORSO ============ -->
-<section class="section section--navy" id="percorso">
+<!-- ============ TESTIMONIANZE VIDEO ============ -->
+<!-- Gli URL dei video si impostano in videos.js (testimonianze: 1-5, nell'ordine). -->
+<section class="section section--navy" id="testimonianze">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Il percorso</span>
-      <h2>Tre fasi verso la padronanza</h2>
-      <p>Formazione strutturata, neuroscienza pratica e mentoring costante, in otto settimane.</p>
+      <span class="eyebrow">Testimonianze</span>
+      <h2>Le storie di chi ha completato il percorso</h2>
+      <p>Racconti di professionisti che hanno applicato il metodo nel proprio lavoro. I risultati individuali possono variare.</p>
     </div>
 
-    <div class="phases">
-      <article class="phase">
-        <div class="phase-num">01</div>
-        <h3>Neuro Influence</h3>
-        <p>Leggere gli stati emotivi del cliente e guidare la conversazione con il linguaggio che orienta ogni decisione di acquisto.</p>
+    <div class="tgrid">
+      <article class="tcard">
+        <div class="vsl-frame vsl-frame--t" data-video="t0">
+          <button class="vsl-play" type="button" aria-label="Guarda la testimonianza di Andrea Moretti"><span class="vsl-icon" aria-hidden="true"></span></button>
+          <span class="vsl-tag">Video 1</span>
+        </div>
+        <p class="tcard-quote">“Ho raddoppiato le chiusure nei primi 60 giorni.”</p>
+        <p class="tcard-name"><strong>Andrea Moretti</strong><span>Consulente commerciale, Torino</span></p>
       </article>
-      <article class="phase">
-        <div class="phase-num">02</div>
-        <h3>Comunicazione ad alto impatto</h3>
-        <p>Dai pitch generici a una comunicazione precisa: gestione delle obiezioni come opportunità di avanzamento della trattativa.</p>
+      <article class="tcard">
+        <div class="vsl-frame vsl-frame--t" data-video="t1">
+          <button class="vsl-play" type="button" aria-label="Guarda la testimonianza di Sara Bellini"><span class="vsl-icon" aria-hidden="true"></span></button>
+          <span class="vsl-tag">Video 2</span>
+        </div>
+        <p class="tcard-quote">“Ho iniziato da zero. Ora chiudo consulenze a 2.000 €.”</p>
+        <p class="tcard-name"><strong>Sara Bellini</strong><span>Ex estetista, oggi Sales Coach</span></p>
       </article>
-      <article class="phase">
-        <div class="phase-num">03</div>
-        <h3>Posizionamento premium</h3>
-        <p>Autorevolezza fin dai primi minuti di contatto. Il professionista si posiziona come partner strategico del cliente, non come semplice venditore, offrendo al mercato ciò che realmente cerca.</p>
+      <article class="tcard">
+        <div class="vsl-frame vsl-frame--t" data-video="t2">
+          <button class="vsl-play" type="button" aria-label="Guarda la testimonianza di Marco Giannini"><span class="vsl-icon" aria-hidden="true"></span></button>
+          <span class="vsl-tag">Video 3</span>
+        </div>
+        <p class="tcard-quote">“Ho alzato i prezzi, scelgo io i clienti e guadagno il 40% in più.”</p>
+        <p class="tcard-name"><strong>Marco Giannini</strong><span>Agente commerciale, Roma</span></p>
       </article>
-    </div>
-
-    <div class="phase-note">
-      <p style="margin:0"><strong>+2.353</strong> vendite chiuse dai partecipanti al percorso</p>
-      <a class="btn btn--gold" href="#contatti">Parla con un Trainer</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTESTO ============ -->
-<section class="section" id="contesto">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Il contesto</span>
-      <h2>Dall'improvvisazione al controllo del processo</h2>
-      <p>Il metodo forma consulenti di alto profilo, non venditori sotto pressione: relazioni profittevoli, trattative ad alto valore e posizionamento premium, in modo etico e scientificamente replicabile. Il percorso si adatta al punto di partenza e al modello di vendita di ciascun partecipante.</p>
-    </div>
-
-    <div class="compare">
-      <div class="compare-col">
-        <h3>Criticità ricorrenti nel mercato</h3>
-        <ul>
-          <li><strong>Assenza di struttura</strong><span>Senza un metodo replicabile, ogni vendita dipende dall'improvvisazione e non è chiaro perché si chiuda o meno.</span></li>
-          <li><strong>Marginalità compressa</strong><span>Senza metodo né posizionamento si vende al ribasso; per molti il tetto resta sotto i 2.000 €/mese di commissioni reali.</span></li>
-          <li><strong>Formazione motivazionale senza strumenti</strong><span>Molta energia, poca sostanza operativa da applicare nelle trattative.</span></li>
-          <li><strong>Percezione di "venditore"</strong><span>I clienti alzano barriere quando percepiscono l'urgenza di chiudere più che di aiutare.</span></li>
-          <li><strong>Scarso controllo emotivo</strong><span>Ansia, fretta e timore del "no" trasformano ogni obiezione in un ostacolo.</span></li>
-          <li><strong>Nessun sistema di misurazione</strong><span>Senza numeri né feedback non si sa cosa migliorare, e i progressi restano fermi.</span></li>
-        </ul>
-      </div>
-      <div class="compare-col compare-col--accent">
-        <h3>Cosa cambia con S.Y.N.C.™</h3>
-        <ul>
-          <li><strong>Più risultati, meno stress</strong><span>Un processo chiaro riduce l'ansia da trattativa e aumenta le chiusure.</span></li>
-          <li><strong>Posizionamento da consulente premium</strong><span>Il cliente riconosce competenza e valore prima ancora del prezzo.</span></li>
-          <li><strong>Crescita dei guadagni a parità di ore</strong><span>Prezzi più alti e clienti selezionati, senza aumentare il carico di lavoro.</span></li>
-          <li><strong>Crescita professionale e personale</strong><span>Leadership, comunicazione e presenza come competenze durature.</span></li>
-          <li><strong>Accesso a una professione ad alto valore</strong><span>Un metodo distintivo per posizionarsi in uno dei settori a maggior potenziale di remunerazione.</span></li>
-          <li><strong>Bonus: Certificazione SYNC Seller</strong><span>Un attestato che formalizza le competenze acquisite.</span></li>
-        </ul>
-      </div>
+      <article class="tcard">
+        <div class="vsl-frame vsl-frame--t" data-video="t3">
+          <button class="vsl-play" type="button" aria-label="Guarda la testimonianza di Giulia Ferraro"><span class="vsl-icon" aria-hidden="true"></span></button>
+          <span class="vsl-tag">Video 4</span>
+        </div>
+        <p class="tcard-quote">“Ora filtro, mi faccio pagare e lavoro con clienti che mi rispettano.”</p>
+        <p class="tcard-name"><strong>Giulia Ferraro</strong><span>Venditrice, Consulente Premium</span></p>
+      </article>
+      <article class="tcard">
+        <div class="vsl-frame vsl-frame--t" data-video="t4">
+          <button class="vsl-play" type="button" aria-label="Guarda la testimonianza di Lorenzo Marchetti"><span class="vsl-icon" aria-hidden="true"></span></button>
+          <span class="vsl-tag">Video 5</span>
+        </div>
+        <p class="tcard-quote">“In 3 mesi ho chiuso contratti per oltre 45.000 €.”</p>
+        <p class="tcard-name"><strong>Lorenzo Marchetti</strong><span>Sales, Milano</span></p>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- ============ PARTNER ============ -->
-<section class="section section--navy" id="partner">
+<!-- TODO: confermare la ragione sociale dei tre loghi RB / dP / MP. -->
+<section class="partners-band" id="partner" aria-label="Partner e collaborazioni">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Partner e collaborazioni</span>
-      <h2>Le organizzazioni che lavorano con Hybrid</h2>
-      <p>Studi professionali, agenzie e piattaforme che scelgono il metodo perché i numeri parlano prima delle parole.</p>
-    </div>
+    <p class="partners-title">Partner e collaborazioni</p>
     <div class="partners">
-      <!-- I loghi sono progettati per sfondi scuri; alcuni partner arrivano già su fondo chiaro -->
       <div class="partner"><img src="assets/partner-mucca-rossa.png" alt="La Mucca Rossa"></div>
       <div class="partner"><img src="assets/partner-supreme-agency.png" alt="Supreme Agency Marketing"></div>
       <div class="partner"><img src="assets/partner-bplanning.png" alt="BPlanning.it"></div>
       <div class="partner"><img src="assets/partner-wared-academy.png" alt="Wared Academy"></div>
       <div class="partner"><img src="assets/partner-eva.png" alt="Eva"></div>
       <div class="partner"><img src="assets/partner-delera.png" alt="Delera"></div>
-      <!-- TODO: confermare la ragione sociale dei tre loghi seguenti -->
       <div class="partner"><img src="assets/partner-rb-studio-legale.png" alt="Studio legale commerciale (RB)"></div>
       <div class="partner"><img src="assets/partner-dp.png" alt="Partner (monogramma dP)"></div>
       <div class="partner"><img src="assets/partner-mp.png" alt="Partner (monogramma MP)"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TESTIMONIANZE ============ -->
-<section class="section section--alt" id="testimonianze">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Testimonianze</span>
-      <h2>L'esperienza di chi ha completato il percorso</h2>
-      <p>Racconti di professionisti che hanno applicato il metodo nel proprio lavoro quotidiano. I risultati individuali possono variare.</p>
-    </div>
-
-    <div class="quotes">
-      <figure class="quote" style="margin:0">
-        <blockquote>Dopo anni a vendere a sentimento, con HYBRID ho scoperto un metodo vero. Ho raddoppiato le chiusure nei primi 60 giorni e, per la prima volta, sento che sto costruendo una carriera, non solo inseguendo vendite.</blockquote>
-        <footer><div class="avatar">AM</div><div><cite>Andrea Moretti</cite><small>Consulente commerciale, Torino</small></div></footer>
-      </figure>
-      <figure class="quote" style="margin:0">
-        <blockquote>Ho iniziato da zero, senza alcuna esperienza nella vendita. Questo metodo mi ha dato struttura, sicurezza e risultati. Ora chiudo consulenze a 2.000 € e ricevo messaggi di ringraziamento ogni settimana. È cambiata la mia vita.</blockquote>
-        <footer><div class="avatar">SB</div><div><cite>Sara Bellini</cite><small>Ex estetista, oggi Sales Coach</small></div></footer>
-      </figure>
-      <figure class="quote" style="margin:0">
-        <blockquote>Con HYBRID ho smesso di essere percepito come quello che vende. Ora mi vedono come un professionista. Ho alzato i prezzi, scelgo io i clienti e guadagno il 40% in più di prima, con meno stress.</blockquote>
-        <footer><div class="avatar">MG</div><div><cite>Marco Giannini</cite><small>Agente commerciale plurimandatario, Roma</small></div></footer>
-      </figure>
-      <figure class="quote" style="margin:0">
-        <blockquote>Lavoravo da sola e prendevo tutto quello che arrivava. Ora filtro, mi faccio pagare e lavoro con clienti che mi rispettano. Merito di questo sistema che mi ha fatto crescere dentro e fuori.</blockquote>
-        <footer><div class="avatar">GF</div><div><cite>Giulia Ferraro</cite><small>Venditrice, Consulente Premium</small></div></footer>
-      </figure>
-      <figure class="quote" style="margin:0">
-        <blockquote>Ero stanco, bruciato, avevo perso fiducia. HYBRID mi ha ridato metodo e visione. In 3 mesi ho chiuso contratti per oltre 45.000 €, ma soprattutto mi sento finalmente al mio posto.</blockquote>
-        <footer><div class="avatar">LM</div><div><cite>Lorenzo Marchetti</cite><small>Sales, Milano</small></div></footer>
-      </figure>
     </div>
   </div>
 </section>
@@ -294,92 +308,57 @@
 
     <div class="faq">
       <details>
-        <summary>A chi è rivolto il programma HYBRID S.Y.N.C.™?</summary>
+        <summary>A chi è rivolto il programma?</summary>
         <div class="answer"><p>A chi vuole vendere con metodo, autorevolezza e controllo: consulenti, professionisti, commerciali, imprenditori, team sales e anche chi parte da zero. È ideale per superare l'improvvisazione e costruire un processo replicabile per gestire trattative, obiezioni e chiusure in modo naturale ed etico.</p></div>
       </details>
       <details>
         <summary>Funziona anche se non ho mai venduto prima?</summary>
-        <div class="answer"><p>Sì. Il percorso accompagna passo dopo passo: si parte da mindset, comunicazione e struttura della call, per arrivare ai livelli avanzati di negoziazione, posizionamento premium e closing. Chi è all'inizio ottiene fondamenta solide; chi è già operativo standardizza e alza il livello.</p></div>
+        <div class="answer"><p>Sì. Il percorso accompagna passo dopo passo: si parte da mindset, comunicazione e struttura della call, per arrivare a negoziazione, posizionamento premium e closing. Chi è all'inizio ottiene fondamenta solide; chi è già operativo standardizza e alza il livello.</p></div>
       </details>
       <details>
         <summary>Quanto tempo serve per vedere risultati?</summary>
         <div class="answer">
           <p>Dipende dall'applicazione, ma i primi cambiamenti arrivano in genere presto:</p>
           <ul>
-            <li>Subito: maggiore sicurezza e chiarezza, meno ansia da call.</li>
+            <li>Subito: più sicurezza e chiarezza, meno ansia da call.</li>
             <li>1–3 settimane: miglioramento concreto su script, gestione delle obiezioni e follow-up.</li>
             <li>30–90 giorni: risultati misurabili su conversioni e ticket medio.</li>
           </ul>
-          <p>Il metodo è progettato per essere applicabile dal primo giorno, non solo da studiare.</p>
         </div>
       </details>
       <details>
-        <summary>Il metodo è motivazionale?</summary>
-        <div class="answer"><p>No. Non è un percorso motivazionale né “da palco”: è un sistema pratico che applica psicologia, neuroscienze, comunicazione e procedure alla vendita reale. La motivazione può arrivare come effetto collaterale, ma il cuore del programma sono azioni, struttura e ripetibilità.</p></div>
-      </details>
-      <details>
-        <summary>Ho già seguito altri corsi di vendita. Perché questo è diverso?</summary>
+        <summary>È motivazionale? Cosa lo rende diverso da altri corsi?</summary>
         <div class="answer">
-          <p>Perché HYBRID S.Y.N.C.™ non insegna trucchi o frasi fatte: costruisce un sistema. Si impara a:</p>
+          <p>No: non è motivazione “da palco” né una raccolta di trucchi e frasi fatte. È un sistema pratico che applica psicologia, neuroscienze, comunicazione e procedure alla vendita reale. Si impara a:</p>
           <ul>
             <li>comprendere rapidamente il cliente e i suoi driver decisionali;</li>
             <li>guidare la conversazione senza spingere, con un closing ad alta fiducia;</li>
             <li>posizionarsi come consulente premium e non come venditore;</li>
             <li>replicare le performance con un metodo chiaro, non con il talento del momento.</li>
           </ul>
-          <p>Meno teoria generica, più processo misurabile.</p>
         </div>
       </details>
       <details>
-        <summary>Come funziona il supporto durante il percorso?</summary>
+        <summary>Come funziona il supporto e dove si studia?</summary>
         <div class="answer">
-          <p>Il supporto è strutturato e continuativo, non a consumo:</p>
+          <p>Lo studio avviene in una piattaforma interna semplice e intuitiva, con contenuti sempre disponibili e ordinati per percorso. Il supporto è continuativo:</p>
           <ul>
             <li>HYBRID Club, community riservata per confronto, domande e casi reali;</li>
-            <li>assistenza dedicata per supporto operativo e tecnico via email e WhatsApp;</li>
-            <li>Customer Care per calendario, accessi e organizzazione;</li>
+            <li>assistenza dedicata via email e WhatsApp, e Customer Care per calendario e accessi;</li>
             <li>trainer e mentor che seguono l'evoluzione del percorso.</li>
           </ul>
         </div>
       </details>
       <details>
-        <summary>Dove si studia? Esiste una piattaforma dedicata?</summary>
+        <summary>Posso studiare quando voglio? Ci sono lezioni di gruppo o private?</summary>
         <div class="answer">
-          <p>Sì, HYBRID S.Y.N.C.™ dispone di una piattaforma interna semplice e intuitiva, con contenuti sempre disponibili, aggiornati e ordinati per percorso:</p>
-          <ul>
-            <li>accesso in qualsiasi momento;</li>
-            <li>studio al proprio ritmo;</li>
-            <li>ripresa da dove ci si era fermati.</li>
-          </ul>
-          <p>Un'unica area riservata, senza dispersione.</p>
-        </div>
-      </details>
-      <details>
-        <summary>Posso studiare quando voglio o ci sono orari fissi?</summary>
-        <div class="answer">
-          <p>La formazione on-demand permette di adattare il percorso ai propri tempi, anche a chi lavora o ha già clienti attivi. In base al pacchetto sono inoltre disponibili:</p>
-          <ul>
-            <li>lezioni di gruppo calendarizzate;</li>
-            <li>sessioni private 1:1;</li>
-            <li>momenti di training live e applicativo.</li>
-          </ul>
-        </div>
-      </details>
-      <details>
-        <summary>Sono previste lezioni private o di gruppo?</summary>
-        <div class="answer">
-          <p>Sì, sono uno dei punti di forza del metodo. In base al pacchetto scelto si può accedere a:</p>
+          <p>La formazione on-demand permette di adattare il percorso ai propri tempi, anche a chi lavora già o ha clienti attivi: moduli chiari, contenuti applicabili subito, zero dispersione. In base al pacchetto sono inoltre disponibili:</p>
           <ul>
             <li>lezioni di gruppo per allenarsi su casi reali;</li>
-            <li>sessioni private su trattative, blocchi o obiettivi specifici;</li>
+            <li>sessioni private 1:1 su trattative, blocchi o obiettivi specifici;</li>
             <li>analisi pratiche di call, script e strategie.</li>
           </ul>
-          <p>Non è solo teoria: è un affiancamento reale, calibrato sul livello di ciascuno.</p>
         </div>
-      </details>
-      <details>
-        <summary>È adatto anche se lavoro già e ho poco tempo?</summary>
-        <div class="answer"><p>Sì. Il percorso è pensato per chi lavora già e non può permettersi corsi dispersivi: moduli chiari, contenuti applicabili subito e focus su ciò che produce risultati. Meglio poco fatto bene, che tanto fatto a metà.</p></div>
       </details>
     </div>
   </div>
@@ -391,17 +370,12 @@
     <div class="contact-copy">
       <span class="eyebrow">Contatti</span>
       <h2>Parla con un Trainer</h2>
-      <p>Scopri S.Y.N.C.™, il metodo scientifico che trasforma la vendita. Compila il modulo: un Trainer ti contatterà per valutare insieme il percorso più adatto.</p>
-      <ul class="contact-list">
-        <li>Colloquio conoscitivo dedicato</li>
-        <li>Valutazione del punto di partenza</li>
-        <li>Indicazioni sul pacchetto più adatto</li>
-      </ul>
+      <p>Compila il modulo: un Trainer ti contatterà per valutare insieme il percorso più adatto al tuo punto di partenza.</p>
     </div>
 
     <div class="form-card">
       <h3>Richiedi un colloquio</h3>
-      <p>Compila i campi: ti ricontatteremo a breve.</p>
+      <p>Bastano pochi dati: ti ricontatteremo a breve.</p>
       <!-- TODO: collegare il modulo a GoHighLevel (embed del form o webhook) al posto del gestore di prova in script.js -->
       <form id="contact-form" novalidate>
         <div class="field"><label for="nome">Nome e cognome</label><input type="text" id="nome" name="nome" autocomplete="name" required></div>
@@ -435,18 +409,18 @@
     <div class="footer-mid">
       <p>HYBRID S.Y.N.C.™ combina neuroscienze e coaching per la crescita professionale e personale.</p>
       <nav class="footer-links" aria-label="Link">
-        <a href="#metodo">Metodo</a>
-        <a href="#testimonianze">Testimonianze</a>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="termini-condizioni.html">Termini &amp; Condizioni</a>
       </nav>
     </div>
+    <!-- TODO: aggiungere ragione sociale, sede legale e P.IVA della società titolare (obbligo per i siti commerciali). -->
     <div class="footer-bottom">© 2026 HYBRID S.Y.N.C.™ Academy. Tutti i diritti riservati.</div>
   </div>
 </footer>
 
 <div class="sticky-cta" id="sticky-cta"><a class="btn btn--gold" href="#contatti">Parla con un Trainer</a></div>
 
+<script src="videos.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
