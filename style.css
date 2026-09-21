@@ -246,9 +246,9 @@ h1, h2, h3 { -webkit-text-stroke: 0.35px currentColor; }
 .header-cta { padding: 12px 20px; font-size: 0.94rem; }
 
 /* ---------- Testimonianze video ---------- */
-.tgrid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; }
+.tgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 28px; }
 .tcard { display: flex; flex-direction: column; }
-.vsl-frame--t { aspect-ratio: 9 / 16; box-shadow: 0 14px 34px rgba(0, 0, 0, 0.4); border-color: rgba(201, 162, 39, 0.35); }
+.vsl-frame--t { aspect-ratio: 2940 / 1912; box-shadow: 0 14px 34px rgba(0, 0, 0, 0.4); border-color: rgba(201, 162, 39, 0.35); }
 .vsl-frame--t .vsl-icon { width: 56px; box-shadow: 0 0 0 7px rgba(201, 162, 39, 0.22); }
 .vsl-frame--t .vsl-icon::after { border-left-width: 16px; border-top-width: 10px; border-bottom-width: 10px; }
 .vsl-frame--t .vsl-tag { top: 8px; left: 8px; font-size: 0.56rem; padding: 4px 7px; }
@@ -332,8 +332,6 @@ h1, h2, h3 { -webkit-text-stroke: 0.35px currentColor; }
 
 /* ---------- Responsive nuove sezioni ---------- */
 @media (max-width: 1040px) {
-  .tgrid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; padding-bottom: 14px; margin-right: -24px; padding-right: 24px; -webkit-overflow-scrolling: touch; }
-  .tcard { flex: 0 0 min(230px, 62vw); scroll-snap-align: start; }
   .partners-band .partners { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 800px) {
@@ -438,4 +436,13 @@ h1, h2, h3 { -webkit-text-stroke: 0.35px currentColor; }
 }
 @media (prefers-reduced-motion: reduce) {
   .ring-fg, .ring-check, .vb-fill, .viz-dots i { transition: none !important; }
+}
+
+/* Testimonianze: 2x2 su desktop e tablet, carosello scorrevole su telefono */
+.tcard-name { margin-top: 14px; }
+.tcard-name strong { font-size: 1.1rem; }
+.vsl-frame--t .vsl-icon { width: 68px; box-shadow: 0 0 0 8px rgba(201, 162, 39, 0.24); }
+@media (max-width: 640px) {
+  .tgrid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; padding-bottom: 14px; margin-right: -24px; padding-right: 24px; -webkit-overflow-scrolling: touch; }
+  .tcard { flex: 0 0 min(300px, 84vw); scroll-snap-align: start; }
 }

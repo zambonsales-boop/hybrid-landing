@@ -6,6 +6,11 @@ function videoUrl(key) {
   const n = parseInt(key.slice(1), 10);
   return (CFG.testimonianze || [])[n] || '';
 }
+function posterUrl(key) {
+  if (key === 'vsl') return CFG.vslPoster || '';
+  const n = parseInt(key.slice(1), 10);
+  return (CFG.testimonianzePoster || [])[n] || '';
+}
 
 // Trasforma il link incollato nell'elemento da mostrare (iframe o <video>)
 function buildPlayer(url, title) {
@@ -17,6 +22,10 @@ function buildPlayer(url, title) {
   if (host === 'youtu.be') id = u.pathname.slice(1);
   else if (host.endsWith('youtube.com') || host.endsWith('youtube-nocookie.com')) {
     id = u.searchParams.get('v') || (u.pathname.match(/\/(?:shorts|embed|live)\/([\w-]{6,})/) || [])[1];
+  }
+  if (!id && (host.endsWith('wistia.net') || host.endsWith('wistia.com'))) {
+    const w = u.pathname.match(/\/(?:embed\/iframe|medias)\/([a-z0-9]{10})/i);
+    if (w) src = 'https://fast.wistia.net/embed/iframe/' + w[1] + '?autoPlay=true&playerColor=c9a227&videoFoam=true';
   }
   if (id) {
     src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1&modestbranding=1';
@@ -45,6 +54,12 @@ document.querySelectorAll('[data-video]').forEach((frame) => {
     frame.style.aspectRatio = CFG.formatoTestimonianze;
   }
   if (url) frame.classList.add('has-video');
+  const poster = posterUrl(frame.dataset.video);
+  if (poster) {
+    frame.style.backgroundImage = 'linear-gradient(rgba(6,21,48,.28), rgba(6,21,48,.5)), url("' + poster + '")';
+    frame.style.backgroundSize = 'cover';
+    frame.style.backgroundPosition = 'center';
+  }
   if (!play) return;
   play.addEventListener('click', () => {
     if (!url) return; // segnaposto: nessun video ancora collegato
