@@ -153,6 +153,11 @@ p { margin: 0 0 1em; }
 .logo-row { display: flex; flex-wrap: wrap; align-items: center; gap: 22px 36px; }
 .logo-row img { height: 56px; width: auto; object-fit: contain; }
 .logo-row .logo-emblem { height: 60px; }
+/* Fascia istituzionale: due righe fisse (3 loghi + 2 loghi) */
+.institutional .logo-row { display: grid; max-width: 720px; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 26px 24px; align-items: center; justify-items: start; }
+.institutional .logo-row img { max-width: 100%; }
+.institutional .logo-row img:nth-child(-n+3) { grid-column: span 2; }
+.institutional .logo-row img:nth-child(n+4) { grid-column: span 3; }
 
 /* ---------- Numeri ---------- */
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
