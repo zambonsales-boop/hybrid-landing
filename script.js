@@ -100,3 +100,17 @@ if (form) {
       : 'Modulo di prova: la raccolta dei dati verrà attivata al collegamento con GoHighLevel.';
   });
 }
+
+// ==== Mini visual dei dati: animazione all'ingresso nello schermo ====
+(function () {
+  const stats = document.querySelector('.stats');
+  if (!stats) return;
+  stats.querySelectorAll('.viz-dots').forEach((d) => d.querySelectorAll('i').forEach((dot, i) => dot.style.setProperty('--i', i)));
+  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return; // senza animazione: visual già completo
+  stats.classList.add('viz-armed');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, { threshold: 0.35 });
+  stats.querySelectorAll('.stat').forEach((el) => io.observe(el));
+})();
